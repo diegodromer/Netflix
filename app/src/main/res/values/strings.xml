@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Netflix</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu_inicio">Início</string>
+    <string name="menu_add">Add</string>
+    <string name="menu_busca">Busca</string>
+    <string name="menu_breve">Breve</string>
+    <string name="menu_downloads">Downloads</string>
+</resources>
