@@ -7,6 +7,7 @@
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/drawable/bg_btn2.xml" value="0.1025" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/drawable/bg_edit.xml" value="0.134" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/drawable/bg_edit2.xml" value="0.1025" />
+        <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/drawable/bg_edit3.xml" value="0.1365" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/drawable/ic_add_red.xml" value="0.1025" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.106" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/drawable/item_selected.xml" value="0.134" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/layout/activity_main.xml" value="0.20555555555555555" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/layout/activity_splash.xml" value="0.20555555555555555" />
+        <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/layout/fragment_add.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/layout/fragment_inicio.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/diego/AndroidStudioProjects/Netflix/app/src/main/res/menu/menu.xml" value="0.22083333333333333" />
       </map>
