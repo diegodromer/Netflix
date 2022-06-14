@@ -7,19 +7,17 @@ import android.os.Bundle;
 
 import com.diegolima.netflix.R;
 
-public class LoginActivity extends AppCompatActivity {
+public class CadastroActivity extends AppCompatActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.activity_cadastro);
 
 		configClicks();
 	}
 
 	private void configClicks(){
-		findViewById(R.id.btnCadastro).setOnClickListener(view -> {
-			startActivity(new Intent(this, CadastroActivity.class));
-		});
+		findViewById(R.id.btnEntrar).setOnClickListener(view -> finish());
 	}
 }
