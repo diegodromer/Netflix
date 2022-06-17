@@ -28,62 +28,86 @@
                 android:id="@+id/cardView"
                 android:layout_width="150dp"
                 android:layout_height="200dp"
-                android:layout_marginTop="16dp"
+                app:cardCornerRadius="10dp"
                 app:cardBackgroundColor="#676767"
-                app:layout_constraintBottom_toTopOf="@+id/editText3"
+                app:layout_constraintBottom_toTopOf="@+id/edtTitulo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/imageFake"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:padding="40dp"
+                        android:src="@drawable/ic_baseline_photo_camera_back_24" />
+
+                </FrameLayout>
             </androidx.cardview.widget.CardView>
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/edtTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:background="@drawable/bg_edit"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_edit3"
                 android:hint="Título"
                 android:padding="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/editText4"
+                android:textColor="@color/white"
+                android:inputType="text"
+                android:textColorHint="#454545"
+                app:layout_constraintBottom_toTopOf="@+id/edtGenero"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/edtGenero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_edit"
+                android:background="@drawable/bg_edit3"
                 android:hint="Gênero"
                 android:padding="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/editText2"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="#454545"
+                app:layout_constraintBottom_toTopOf="@+id/edtElenco"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+                app:layout_constraintTop_toBottomOf="@+id/edtTitulo" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/edtElenco"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="text"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_edit"
+                android:background="@drawable/bg_edit3"
                 android:hint="Elenco"
                 android:padding="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="#454545"
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+                app:layout_constraintTop_toBottomOf="@+id/edtGenero" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -91,76 +115,86 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@+id/editText5"
+                app:layout_constraintBottom_toTopOf="@+id/EdtSinopse"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText2">
+                app:layout_constraintTop_toBottomOf="@+id/edtElenco">
 
                 <EditText
+                    android:id="@+id/edtAno"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_edit"
+                    android:background="@drawable/bg_edit3"
                     android:hint="Ano"
+                    android:inputType="number"
                     android:padding="16dp"
-                    app:layout_constraintEnd_toStartOf="@+id/editText"
+                    android:textColor="@color/white"
+                    android:textColorHint="#454545"
+                    app:layout_constraintEnd_toStartOf="@+id/edtDuracao"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:layout_editor_absoluteY="439dp" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/edtDuracao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_edit"
+                    android:background="@drawable/bg_edit3"
+                    android:inputType="number"
                     android:hint="Duração"
                     android:padding="16dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#454545"
                     app:layout_constraintEnd_toEndOf="parent"
                     tools:layout_editor_absoluteY="439dp" />
             </LinearLayout>
 
             <EditText
-                android:id="@+id/editText5"
+                android:id="@+id/EdtSinopse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_edit"
+                android:background="@drawable/bg_edit3"
                 android:hint="Sinopse"
                 android:padding="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/button"
+                android:textColor="@color/white"
+                android:inputType="text"
+                android:textColorHint="#454545"
+                app:layout_constraintBottom_toTopOf="@+id/btnSalvar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
             <android.widget.Button
-                android:id="@+id/button"
+                android:id="@+id/btnSalvar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/bg_edit"
                 android:text="Cadastrar"
-                app:layout_constraintBottom_toTopOf="@+id/progressBar2"
+                app:layout_constraintBottom_toTopOf="@+id/progressBar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText5" />
+                app:layout_constraintTop_toBottomOf="@+id/EdtSinopse" />
 
             <ProgressBar
-                android:id="@+id/progressBar2"
+                android:id="@+id/progressBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="24dp"
                 android:indeterminateTint="@color/colorPrimary"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button" />
+                app:layout_constraintTop_toBottomOf="@+id/btnSalvar" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

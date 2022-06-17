@@ -8,6 +8,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.os.Bundle;
 
 import com.diegolima.netflix.R;
+import com.diegolima.netflix.model.Categoria;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,5 +25,20 @@ public class MainActivity extends AppCompatActivity {
 		NavController navController = navHostFragment.getNavController();
 
 		NavigationUI.setupWithNavController(bottomNavigationView, navController);
+
+		//salvarCategorias();
+	}
+
+	private void salvarCategorias() {
+		new Categoria("Ação");
+		new Categoria("Aventura");
+		new Categoria("Animação");
+		new Categoria("Comédia");
+		new Categoria("Drama");
+		new Categoria("Épico");
+		new Categoria("Faroeste");
+		new Categoria("Ficção");
+		new Categoria("Guerra");
+		new Categoria("Terror");
 	}
 }
