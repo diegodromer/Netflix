@@ -22,4 +22,10 @@
     <style name="FloatingActionButtonTheme">
         <item name="colorOnSecondary">@color/white</item>
     </style>
+    
+    <style name="SeekBarTheme">
+        <item name="android:progressBackgroundTint">@color/colorPrimaryDark</item>
+        <item name="android:progressTint">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorPrimaryDark</item>
+    </style>
 </resources>
