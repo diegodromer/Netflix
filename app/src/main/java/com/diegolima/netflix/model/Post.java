@@ -3,7 +3,9 @@ package com.diegolima.netflix.model;
 import com.diegolima.netflix.helper.FirebaseHelper;
 import com.google.firebase.database.DatabaseReference;
 
-public class Post {
+import java.io.Serializable;
+
+public class Post implements Serializable {
 	private String id;
 	private String titulo;
 	private String genero;

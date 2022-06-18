@@ -17,7 +17,7 @@
         android:theme="@style/Theme.Netflix"
         tools:targetApi="31">
         <activity
-            android:name=".DetalhePostctivity"
+            android:name=".activity.DetalhePostActivity"
             android:exported="false" />
         <activity
             android:name=".autenticacao.CadastroActivity"

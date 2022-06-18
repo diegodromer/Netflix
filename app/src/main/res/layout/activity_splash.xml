@@ -8,7 +8,7 @@
     tools:context=".activity.SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imagemPost"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:src="@drawable/logo2"

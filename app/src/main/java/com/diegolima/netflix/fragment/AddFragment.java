@@ -26,12 +26,7 @@ import android.widget.Toast;
 
 import com.diegolima.netflix.R;
 import com.diegolima.netflix.helper.FirebaseHelper;
-import com.diegolima.netflix.model.Categoria;
 import com.diegolima.netflix.model.Post;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.gun0912.tedpermission.PermissionListener;
@@ -230,7 +225,7 @@ public class AddFragment extends Fragment {
 
 	private void iniciaComponentes(View view) {
 		btnSalvar = view.findViewById(R.id.btnSalvar);
-		imageView = view.findViewById(R.id.imageView);
+		imageView = view.findViewById(R.id.imagemPost);
 		imageFake = view.findViewById(R.id.imageFake);
 		progressBar = view.findViewById(R.id.progressBar);
 
