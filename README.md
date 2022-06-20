@@ -1,4 +1,6 @@
-App Clone Netflix, desenvolvido para poder estudar e aprimorar as ténicas de desenvolvimento Android.
+# App Clone Netflix
+
+Desenvolvido para poder estudar e aprimorar as ténicas de desenvolvimento Android.
 
 # Screenshot das Telas do App:
 
