@@ -5,9 +5,12 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.diegolima.netflix.R;
+import com.diegolima.netflix.autenticacao.LoginActivity;
+import com.diegolima.netflix.helper.FirebaseHelper;
 import com.diegolima.netflix.model.Categoria;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 		NavController navController = navHostFragment.getNavController();
 
 		NavigationUI.setupWithNavController(bottomNavigationView, navController);
-
-		//salvarCategorias();
 	}
 
 	private void salvarCategorias() {

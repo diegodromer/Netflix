@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.view.View;
 
 import com.diegolima.netflix.R;
+import com.diegolima.netflix.autenticacao.LoginActivity;
+import com.diegolima.netflix.helper.FirebaseHelper;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -18,8 +20,12 @@ public class SplashActivity extends AppCompatActivity {
 
 		new Handler(getMainLooper()).postDelayed(() -> {
 			finish();
-			startActivity(new Intent(this, MainActivity.class));
-		}, 500);
+			if (FirebaseHelper.getAutenticado()){
+				startActivity(new Intent(this, MainActivity.class));
+			}else{
+				startActivity(new Intent(this, LoginActivity.class));
+			}
+		}, 1500);
 	}
 
 	@Override
