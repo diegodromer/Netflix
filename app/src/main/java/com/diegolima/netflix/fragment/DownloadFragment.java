@@ -120,9 +120,9 @@ public class DownloadFragment extends Fragment implements AdapterDownload.OnClic
 		postList.remove(post);
 		adapterDownload.notifyDataSetChanged();
 
-		listIsEmpty();
-
 		downloadList.remove(post.getId());
 		Download.salvar(downloadList);
+
+		listIsEmpty();
 	}
 }
