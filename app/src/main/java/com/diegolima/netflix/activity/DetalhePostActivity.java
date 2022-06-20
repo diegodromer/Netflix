@@ -7,16 +7,19 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.diegolima.netflix.R;
 import com.diegolima.netflix.adapter.AdapterCategoria;
 import com.diegolima.netflix.adapter.AdapterPost;
 import com.diegolima.netflix.helper.FirebaseHelper;
 import com.diegolima.netflix.model.Categoria;
+import com.diegolima.netflix.model.Download;
 import com.diegolima.netflix.model.Post;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -30,6 +33,7 @@ import java.util.List;
 public class DetalhePostActivity extends AppCompatActivity {
 
 	private List<Post> postList = new ArrayList<>();
+	private List<String> downloadList = new ArrayList<>();
 	private AdapterPost adapterPost;
 
 	private TextView textTitulo;
@@ -57,6 +61,7 @@ public class DetalhePostActivity extends AppCompatActivity {
 		configDados();
 		configCliques();
 		recuperaPost();
+		recuperaDownloads();
 	}
 
 	private void configDados() {
@@ -75,8 +80,42 @@ public class DetalhePostActivity extends AppCompatActivity {
 	}
 
 	private void configCliques() {
-		findViewById(R.id.ibVoltar).setOnClickListener(view -> finish());
+		findViewById(R.id.ibVoltar).setOnClickListener(view -> {
+			startActivity(new Intent(this, MainActivity.class));
+			finish();
+		});
+		findViewById(R.id.btnBaixar).setOnClickListener(view -> efetuarDownload());
 	}
+
+	private void efetuarDownload() {
+
+		if (!downloadList.contains(post.getId())){
+			downloadList.add(post.getId());
+			Download.salvar(downloadList);
+			Toast.makeText(getBaseContext(), "Download efetuado com sucesso!", Toast.LENGTH_SHORT).show();
+		}else{
+			Toast.makeText(getBaseContext(), "Download já efetuado anteriormente!", Toast.LENGTH_SHORT).show();
+		}
+	}
+
+	private void recuperaDownloads() {
+		DatabaseReference downloadRef = FirebaseHelper.getDatabaseReference()
+				.child("downloads");
+		downloadRef.addListenerForSingleValueEvent(new ValueEventListener() {
+			@Override
+			public void onDataChange(@NonNull DataSnapshot snapshot) {
+				for (DataSnapshot ds : snapshot.getChildren()){
+					downloadList.add(ds.getValue(String.class));
+				}
+			}
+
+			@Override
+			public void onCancelled(@NonNull DatabaseError error) {
+
+			}
+		});
+	}
+
 
 	private void recuperaPost() {
 		DatabaseReference postRef = FirebaseHelper.getDatabaseReference()
